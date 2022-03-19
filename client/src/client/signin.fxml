@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Signin">
+   <left>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to left,#bee3db, #e0fbfc,#ffd6ba,#faf9f9);" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="GREY" layoutX="112.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XO Gaming">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="96.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/xo1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="415.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="username_field" layoutX="116.0" layoutY="191.0" promptText="username" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="password_field" layoutX="116.0" layoutY="250.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <FontAwesomeIcon fill="#0598ff" glyphName="KEY" layoutX="82.0" layoutY="273.0" size="20" />
+            <FontAwesomeIcon fill="#0598ff" glyphName="USER" layoutX="83.0" layoutY="214.0" size="20" />
+            <Button fx:id="signin_btn" layoutX="149.0" layoutY="346.0" mnemonicParsing="false" onAction="#onLoginHandler" prefHeight="34.0" prefWidth="81.0" style="-fx-background-color: #0598ff;" text="sign in" textFill="WHITE" />
+            <Hyperlink fx:id="signup_link" layoutX="161.0" layoutY="437.0" onAction="#switchToSignup" text="sign up" />
+            <Label layoutX="155.0" layoutY="64.0" text="sign in" textFill="#0598ff">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="alert_label" layoutX="176.0" layoutY="320.0" text="" textFill="RED" />
+            <Label fx:id="username_label" layoutX="135.0" layoutY="226.0" text="" />
+            <Label fx:id="password_label" layoutX="135.0" layoutY="284.0" text="" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

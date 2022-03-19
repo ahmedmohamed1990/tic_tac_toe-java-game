@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="696.0" style="-fx-background-color: linear-gradient(to right,#bee3db,#e0fbfc,#ffd6ba,#faf9f9);;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Game">
+    <children>
+        <ImageView fx:id="backgroundimg" fitHeight="136.0" fitWidth="155.0" layoutX="277.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../logo.png" />
+            </image>
+        </ImageView>
+        <!--onAction="#onActionExit"-->
+        <Button fx:id="exitButton" onAction="#ExitGame" layoutX="366.0" layoutY="501.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: gray;" text="Exit" textFill="#efeded">
+            <font>
+                <Font name="Times New Roman Bold" size="18.0" />
+            </font></Button>
+            <!--onAction="#onActionReset"-->
+        <Button fx:id="resetButton" onAction="#restartGame" layoutX="196.0" layoutY="501.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" style="-fx-background-radius: 10; -fx-background-color: gray;" text="Reset" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="18.0" />
+            </font>
+        </Button>
+        <AmbientLight color="CHARTREUSE" layoutX="74.0" layoutY="78.0" lightOn="true" />
+      <ImageView fitHeight="101.0" fitWidth="103.0" layoutX="42.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../input-onlinepngtools.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgComputer" fitHeight="101.0" fitWidth="103.0" layoutX="558.0" layoutY="230.0" pickOnBounds="true">
+         <image>
+            <Image url="@../player.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="60.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../o.png" />
+         </image></ImageView>
+      <ImageView fitHeight="66.0" fitWidth="72.0" layoutX="578.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../x.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblXPlayer" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="428.0" prefHeight="21.0" prefWidth="155.0" textAlignment="CENTER" textFill="#e8e865">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblOPlayer" alignment="CENTER" contentDisplay="CENTER" layoutX="530.0" layoutY="428.0" prefHeight="21.0" prefWidth="155.0" textAlignment="CENTER" textFill="#e8e865">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <FlowPane layoutX="209.0" layoutY="190.0" prefHeight="238.0" prefWidth="278.0">
+         <children>
+            <Button fx:id="button1" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button3" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button4" layoutX="10.0" layoutY="89.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button5" layoutX="102.0" layoutY="89.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button6" layoutX="10.0" layoutY="89.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button7" layoutX="102.0" layoutY="89.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button8" layoutX="194.0" layoutY="89.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+            <Button fx:id="button9" mnemonicParsing="false" prefHeight="79.0" prefWidth="92.0" />
+         </children>
+      </FlowPane>
+      <Label fx:id="win" layoutX="245.0" layoutY="454.0" prefHeight="40.0" prefWidth="187.0" style="-fx-text-alignment: center;" textFill="GREY">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+
+    </children>
+</Pane>
